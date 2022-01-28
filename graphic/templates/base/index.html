@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="slider" style="transform: perspective(1000px) rotateY(100deg);">
+        <span style="--i:1; --y:-100px"><img src="/static/AiNhu/ainhu1.jpg" alt="1"></span>
+        <span style="--i:2; --y:-100px"><img src="/static/AiNhu/ainhu2.jpg" alt="1"></span>
+        <span style="--i:3; --y:-50px"><img src="/static/AiNhu/ainhu3.jpg" alt="1"></span>
+        <span style="--i:4; --y:-0px"><img src="/static/AiNhu/ainhu4.jpg" alt="1"></span>
+        <span style="--i:5; --y:50px"><img src="/static/AiNhu/ainhu5.jpg" alt="1"></span>
+        <span style="--i:6; --y:100px"><img src="/static/AiNhu/ainhu6.jpg" alt="1"></span>
+        <span style="--i:7; --y:150px"><img src="/static/AiNhu/ainhu7.jpg" alt="1"></span>
+        <span id="question" style="--i:8; --y:150px"><img src="/static/AiNhu/question-mark.png" alt="1"></span>
+        <!-- <span style="--i:8; --y:50px"><img src="/static/AiNhu/ainhu7.jpg" alt="1"></span> -->
+    </div>
+    
+</body>
+<script>
+    // var slider = document.querySelector('.slider');
+    // function zoom(e){
+    //     var rotateY=slider.style.transform.split(" ")[1].replace(/\D+/g, '');
+    //     if(e.deltaY < 0){
+    //         rotateY=(parseInt(rotateY)+50).toString();
+    //         slider.animate([
+    //             {transform: 'perspective(1000px) rotateY(0deg)'},
+    //             {transform: 'perspective(1000px) rotateY(360deg)'}
+    //         ],{
+                
+    //             iterations: Infinity
+    //         });
+
+    //         slider.style.transform='perspective(1000px) rotateY('+rotateY+'deg)';
+    //     }else{
+    //         rotateY=(parseInt(rotateY)-50).toString();
+    //         console.log(rotateY)
+    //         slider.style.transform='perspective(1000px) rotateY('+rotateY+'deg)';
+    //     }
+    // }
+    // window.onwheel=zoom;
+    document.getElementById("question").addEventListener("click",()=>{
+        window.location.href = "/lixi"
+    })
+   
+    
+</script>
+</html>
