@@ -139,7 +139,8 @@
                     alert('Oh no, you have gone BANKRUPT!');
                 } else {
                     const xhttp= new XMLHttpRequest();
-                    url="http://localhost:8000/lixi/?phanthuong="+indicatedSegment.text;
+                    // url="http://localhost:8000/lixi/?phanthuong="+indicatedSegment.text;
+                    url="https://ainhu.herokuapp.com/lixi/?phanthuong="+indicatedSegment.text;
                     xhttp.open("GET",url );
                     xhttp.send();
                     alert("You have won " + indicatedSegment.text);
