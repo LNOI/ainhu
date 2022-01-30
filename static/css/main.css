@@ -9,10 +9,11 @@ Verison History:
     2015-09-26, Douglas McKechie
     - Minor updates for the 2.0 winwheel example.
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap');
 body
 {
-    font-family: arial;
+    font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif;
 }
 
 /* Sets the background image for the wheel */
