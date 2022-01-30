@@ -3,7 +3,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponseRedirect
 from .models import Logs
-from datetime import date, datetime
+from datetime import date, datetime, tzinfo
+import pytz
 # Create your views here.
 
 def home(request):
@@ -15,12 +16,14 @@ def lixi(request):
             print("Rong")
         else:
             if request.GET["phanthuong"]:
-                now=datetime.now()
+                tz=pytz.timezone('Asia/Ho_Chi_Minh')
+                now=datetime.now(tz)
                 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
-                log=dt_string+"    "+request.GET["phanthuong"]
+                log=dt_string+"  -  "+request.GET["phanthuong"]
                 logs={
                     'history':log
                 }
+                print(log)
                 Logs.objects.create(**logs)
 
     return render(request,"base/lixi.html",{})
