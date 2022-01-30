@@ -665,7 +665,7 @@ li:nth-child(15){
   color: white;
   font-size: 30px;
   z-index: 100px;
-  opacity: 0.6;
+  opacity: 0.85;
   text-shadow: 5px 2px #222324, 2px 4px #222324, 3px 5px #222324;
 }
 
